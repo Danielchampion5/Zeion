@@ -15,6 +15,7 @@ h2 {
 p {
     font-family: "Comfortaa";
     font-size: 20px;
+    font-weight: 1000;
 }
 
 html {
@@ -29,6 +30,10 @@ html {
     background-position-y: center;
     background-repeat: no-repeat;
     padding: 20px;
+}
+
+header button {
+    display: none;
 }
 
 .container-grid {
@@ -243,6 +248,14 @@ footer {
     align-items: center;
 }
 
+.icones-redes a {
+    color: white;
+}
+
+.icones-redes a:hover {
+    color: #F19B9B;
+}
+
 footer.container-grid {
     display: flex;
     align-items: center;
@@ -259,19 +272,28 @@ footer.container-grid {
         position: relative;
     }
 
+    .container-grid {
+        display: flex;
+        justify-content: space-between;
+    }
+
     header button {
         width: 50px;
-        display: none;
+        display: unset;
         background: none;
         border: none;
     }
 
-    .container-grid button {
-        display: none;
+    header svg {
+        fill: white;
     }
 
     header svg {
         fill: white;
+    }
+
+    .conteudo-banner h2 {
+        font-size: 30px;
     }
 
     nav.menu {
@@ -308,15 +330,35 @@ footer.container-grid {
 }
 
 @media screen and (max-width: 1080px) {
+    .backgroud {
+        background-repeat: repeat-y;
+    }
+
+
     .container-cards {
         flex-wrap: wrap;
+
+    }
+
+    #cases {
+        height: 850px;
+    }
+
+    #cases h2 {
+        padding-bottom: 50px;
     }
 
     .card {
-        height: 325px;
+        height: 300px;
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 40%;
+        width: 175px;
+        border-radius: 0;
+    }
+
+    .contato {
+        margin-top: 50px;
     }
 
     footer {
@@ -478,5 +520,9 @@ footer.container-grid {
 
     footer img {
         width: 200px;
+    }
+
+    .card {
+        width: 250px;
     }
 }
