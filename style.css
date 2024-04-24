@@ -92,6 +92,7 @@ header button {
     flex-direction: column;
     justify-content: space-between;
     padding: 80px 25%;
+    background-image: linear-gradient(90deg, rgba(247,247,247,0.8156512605042017) 35%, rgba(255,255,255,0.7904411764705882) 100%);
 }
 
 /*Config. Cases*/
@@ -196,7 +197,7 @@ header button {
 
 .campo input {
     height: 40px;
-    color: white;
+    color: black;
     background-color: white;
     border: none;
     border-radius: 50px;
@@ -316,7 +317,7 @@ footer.container-grid {
 
     .card {
         height: 300px;
-        width: 180px;
+        width: 240px;
         text-align: center;
     }
 
@@ -353,8 +354,7 @@ footer.container-grid {
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 40%;
-        width: 175px;
-        border-radius: 0;
+        width: 175px;     
     }
 
     .contato {
@@ -391,6 +391,10 @@ footer.container-grid {
 }
 
 @media screen and (max-width: 800px) {
+    .container-grid img {
+        width: 100px;
+    }
+
     .card {
         flex-basis: 45%;
     }
@@ -460,6 +464,10 @@ footer.container-grid {
         margin-bottom: 20px;
     }
 
+    #cases {
+        padding: 30px;
+    }
+
     #cases.container-grid {
         margin: unset;
         width: 100%;
@@ -475,6 +483,7 @@ footer.container-grid {
         flex-basis: unset;
         height: 400px;
         width: 280px;
+        border-radius: 0;
     }
 
     .card:first-child {
