@@ -16,6 +16,7 @@ p {
     font-family: "Comfortaa";
     font-size: 20px;
     font-weight: 1000;
+    line-height: 1.5;
 }
 
 html {
@@ -124,13 +125,26 @@ header button {
     box-shadow: 5px 5px 10px 0px #000;
     background-color: white;
     padding-top: 30px;
+    transition: 750ms;
+    transition-delay: 100ms;
 }
 
 .card:hover {
     transform: scale(1.15);
-    transition: 750ms;
-    transition-delay: 100ms;
-    /*Colocar transicão reversa*/
+}
+
+.card:hover::after {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: inherit;
+    transition-delay: inherit;
+    transform: scale(0.87);
 }
 
 .card img {
@@ -165,7 +179,7 @@ header button {
 }
 
 #contato h2 {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
 #contato form {
@@ -211,7 +225,7 @@ header button {
 }
 
 .campo input:focus {
-    outline: 2px solid black;
+    outline: 2px solid #940303b3;
 }
 
 #contato form button {
@@ -335,14 +349,12 @@ footer.container-grid {
         background-repeat: repeat-y;
     }
 
-
     .container-cards {
+        height: 100%;
         flex-wrap: wrap;
-
-    }
-
-    #cases {
-        height: 850px;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
     }
 
     #cases h2 {
@@ -357,8 +369,8 @@ footer.container-grid {
         width: 175px;     
     }
 
-    .contato {
-        margin-top: 50px;
+    #contato {
+        margin-top: 200px;
     }
 
     footer {
@@ -395,8 +407,34 @@ footer.container-grid {
         width: 100px;
     }
 
+    #cases {
+        height: 600px;
+        padding: 40px;
+    }
+
     .card {
         flex-basis: 45%;
+    }
+
+    .container-cards {
+        flex-wrap: nowrap;
+        gap: 40px;
+        overflow: auto;
+        height: 100%;
+        flex-wrap: nowrap;
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    .card {
+        flex-basis: unset;
+        height: 400px;
+        width: 280px;
+        border-radius: 0;
+    }
+
+    #contato {
+        margin-top: 50px;
     }
 }
 
@@ -417,6 +455,13 @@ footer.container-grid {
     #cases,
     #contato {
         margin-bottom: unset;
+    }
+
+    .card {
+        flex-basis: unset;
+        height: 400px;
+        width: 280px;
+        border-radius: 0;
     }
 
     #portifolio a {
@@ -471,19 +516,6 @@ footer.container-grid {
     #cases.container-grid {
         margin: unset;
         width: 100%;
-    }
-
-    .container-cards {
-        flex-wrap: nowrap;
-        gap: 40px;
-        overflow: auto;
-    }
-
-    .card {
-        flex-basis: unset;
-        height: 400px;
-        width: 280px;
-        border-radius: 0;
     }
 
     .card:first-child {
