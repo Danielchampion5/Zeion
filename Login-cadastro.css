@@ -6,6 +6,19 @@
 }
 
 /*Config. cadastro&login*/
+.botoes a {
+    font-family: "Montserrat";
+    color: black;
+    font-size: 15px;
+    text-decoration: underline transparent;
+    text-decoration-thickness: 2px;
+    transition: text-decoration 500ms ease;
+}
+
+.botoes a:hover {
+    text-decoration-color: black;
+}
+
 .area {
     background-color: white;
     width: 1100px;
@@ -51,6 +64,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: 60px;
+    padding-left: 175px;
 }
 
 .campo label {
@@ -110,7 +124,7 @@ body {
 }
 
 .campos.campo input {
-    width: 70%;
+    width: 80%;
 }
 
 form button {
@@ -131,6 +145,7 @@ form button:hover {
 
 input {
     height: 50px;
+    width: 80%;
     color: white;
     background-color: white;
     border: none;
@@ -155,13 +170,21 @@ input:focus {
 /*Responsividade*/
 @media screen and (max-width :1300px) {
     form {
-        width: 65%;
+        width: 80%;
+    }
+
+    .campo {
+        padding-left: 125px;
     }
 }
 
 @media screen and (max-width: 1080px) {
     form {
-        width: 70%;
+        width: 90%;
+    }
+
+    .campo {
+        padding-left: 75px;
     }
 
     .cadastro-login {
@@ -187,6 +210,7 @@ input:focus {
 
     .campo {
         width: 100%;
+        padding-left: 0px;
     }
 
     .area {

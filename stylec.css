@@ -110,7 +110,12 @@ body {
 }
 
 .campos.campo input {
-    width: 70%;
+    width: 60%;
+}
+
+#campo-email,
+#campo-input {
+    width: 60%;
 }
 
 form button {
@@ -131,6 +136,7 @@ form button:hover {
 
 input {
     height: 50px;
+    width: 60%;
     color: white;
     background-color: white;
     border: none;
