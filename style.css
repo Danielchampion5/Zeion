@@ -46,6 +46,14 @@ header button {
     align-items: center;
 }
 
+.menu-fechado {
+  display: "";
+}
+
+#icone-x {
+    display: none;
+}
+
 .conteudo-banner {
     height: calc(100vh - 280px);
     padding: 20px;
@@ -342,7 +350,9 @@ footer.container-grid {
     #contato form {
         width: 65%;
     }
+
 }
+
 
 @media screen and (max-width: 1080px) {
     .backgroud {
@@ -497,6 +507,7 @@ footer.container-grid {
         width: 100%;
         display: none;
     }
+
 
     #sobre {
         padding-left: 0;

@@ -48,7 +48,7 @@
                 <!--Logotipo e botões-->
                 <img src="img/Group 4.svg" alt="Logotipo da empresa Zeion">
 
-                <nav class="menu">
+                <nav id="menu" class="menu">
                     <a href="#sobre">Sobre</a>
                     <a href="#cases">Cases</a>
                     <a href="#contato">Contato</a>
@@ -56,14 +56,18 @@
                     <a href="Login-cadastro.html">Cadastro & Login</a>
                 </nav>
 
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg"
+                <button onclick="abrirFecharMenu()">
+                    <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path
                             d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
                     </svg>
+                    <svg id="icone-x" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#ffffff"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
                 </button>
-
             </div>
 
         </header>
@@ -102,9 +106,9 @@
             </p>
 
             <p>
-                Procuramos sempre, fazer o melhor e entregar o melhor a nossos clientes e confiamos em nossa equipe 
-                cheia de profissionais competentes e muito qualificados. Entregamos tudo de nós em cada trabalho e 
-                ajudamos as pessoas a desempenhar suas funcões com exelencia, sem extresse, sem distracões e sem 
+                Procuramos sempre, fazer o melhor e entregar o melhor a nossos clientes e confiamos em nossa equipe
+                cheia de profissionais competentes e muito qualificados. Entregamos tudo de nós em cada trabalho e
+                ajudamos as pessoas a desempenhar suas funcões com exelencia, sem extresse, sem distracões e sem
                 perda de tempo.
             </p>
 
@@ -161,12 +165,12 @@
 
             <h2>Contate-nos</h2>
 
-            <form>
+            <form onsubmit="solicitarOrcamento()">
                 <div class="campo">
 
                     <label for="campo-nome">Qual é o seu nome?</label>
 
-                    <input id="campo-nome" type="text" placeholder="Digite seu nome aqui.">
+                    <input required id="campo-nome" type="text" placeholder="Digite seu nome aqui.">
 
                 </div>
 
@@ -174,7 +178,7 @@
 
                     <label for="campo-email">Qual o seu melhor e-mail?</label>
 
-                    <input id="campo-email" type="email" placeholder="Digite seu e-mail aqui.">
+                    <input required id="campo-email" type="email" placeholder="Digite seu e-mail aqui.">
 
                 </div>
 
@@ -182,11 +186,11 @@
 
                     <label for="campo-telefone">Digite seu numero de celular(com DDD).</label>
 
-                    <input id="campo-telefone" type="text" placeholder="Digite seu telefone aqui.">
+                    <input required id="campo-telefone" type="text" placeholder="Digite seu telefone aqui.">
 
                 </div>
 
-                <button>Concluir</button>
+                <button type="submit">Concluir</button>
 
             </form>
 
@@ -206,8 +210,7 @@
 
                 <div class="icones-redes">
                     <a href="#">
-                        <svg width="50" height="50" viewBox="0 0 100 90" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="50" height="50" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M31.45 89.9477C69.185 89.9477 89.825 55.3933 89.825 25.4315C89.825 24.4479 89.825 23.4717 89.765 22.4991C93.78 19.294 97.245 15.3145 100 10.7612C96.26 12.5958 92.285 13.7989 88.22 14.3294C92.5 11.4946 95.705 7.04092 97.24 1.78572C93.21 4.42713 88.805 6.29132 84.21 7.29157C76.44 -1.83736 63.445 -2.27966 55.18 6.30769C49.855 11.8447 47.59 20.1003 49.245 27.9748C32.75 27.0575 17.38 18.4482 6.96 4.28514C1.515 14.6463 4.3 27.8962 13.315 34.5495C10.05 34.4444 6.855 33.4729 4 31.7157V32.0034C4.005 42.7957 10.89 52.0884 20.46 54.2269C17.44 55.1387 14.27 55.2709 11.2 54.6133C13.885 63.8527 21.59 70.1811 30.365 70.3635C23.1 76.6741 14.125 80.1008 4.885 80.0898C3.255 80.0843 1.625 79.9791 0 79.7637C9.385 86.4169 20.3 89.9478 31.45 89.9313"
                                 fill="currentcolor" />
@@ -223,8 +226,7 @@
                     </a>
 
                     <a href="#">
-                        <svg width="50" height="50" viewBox="0 0 100 90" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="50" height="50" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M50 69.2931C65.4639 69.2931 78 58.4375 78 45.0465C78 31.6554 65.4639 20.7998 50 20.7998C34.536 20.7998 22 31.6554 22 45.0465C22 58.4375 34.536 69.2931 50 69.2931ZM50 61.2109C60.3091 61.2109 68.6667 53.9737 68.6667 45.0465C68.6667 36.1191 60.3091 28.882 50 28.882C39.6907 28.882 31.3333 36.1191 31.3333 45.0465C31.3333 53.9737 39.6907 61.2109 50 61.2109Z"
                                 fill="currentcolor" />
